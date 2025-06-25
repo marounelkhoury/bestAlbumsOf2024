@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: grey;
+                color: white;
+            }
+
+            header {
+                padding: 2rem 1rem;
+                background: linear-gradient(to bottom, white, #1a1a1a);
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+                color: #ccc;
+            }
+
+            main {
+                max-width: 600px;
+                margin: 2rem auto;
+                padding: 1rem;
+                background-color: #333;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+                border: grey dashed 4px;
+            }
+
+            form {
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                gap: 1rem;
+            }
+
+            form div p {
+                color: grey;
+            }
+
+            input, textarea {
+                padding: 0.75rem;
+                width: 100%;
+                margin: 5px;
+                font-family: Arial, sans-serif;
+                font-size: 1rem;
+                border: 1px solid #555;
+                border-radius: 5px;
+                resize: none;
+                background-color: #222;
+                color: white;
+            }
+
+            button {
+                padding: 0.75rem;
+                font-size: 1rem;
+                border: none;
+                border-radius: 5px;
+                background-color: #444;
+                color: white;
+                cursor: pointer;
+                transition: background 0.3s ease;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Contact Us</h1>
+            <p>We would love to hear from you! Send us your suggestions, feeddback or questions.</p>
+        </header>
+
+        <main>
+            <form id="contact">
+                <div class="info">
+                    Name: <input type="text" id="name" placeholder="*Enter your name" required><br>
+                    Email: <input type="text" id="email" placeholder="*Enter your E-mail" required><br>
+                    Message: <textarea id="message" rows="5" placeholder="Enter your feedback or your question."></textarea><br>
+                    <br>
+                    <p>If you have any album suggestion please submit it below.</p><br>
+                    Album: <input type="text" id="album" placeholder="Album title"><br> Artist/Band: <input type="text" id="artits/text" placeholder="Artist/Band name"><br>    
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+    </body>
+</html>

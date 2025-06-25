@@ -1,0 +1,188 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+  color: white;
+}
+
+header {
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 237px;
+  display: flex;
+  justify-content: center;
+  margin: 0; 
+  padding: 0;
+  background: linear-gradient(to bottom, #333, #1a1a1a);
+}
+
+.slider::before {
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.slides {
+  max-height: 100%;
+  height: auto;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  height: 273px;
+  object-fit: cover;
+}
+
+header h1 {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 4rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 0;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+header nav button {
+  padding: 10px 20px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  white-space: nowrap;
+}
+
+header nav button:hover {
+  background: #666;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  header {
+    height: 250px;
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem; 
+  }
+
+  header nav button {
+    padding: 8px 16px;
+  }
+
+  .album {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    height: 200px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  header nav button {
+    padding: 6px 12px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#album-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.album {
+  background: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s;
+  height: 350px;
+  max-width: 200px;
+  max-height: 320px;
+}
+
+.album:hover {
+  transform: scale(1.05);
+}
+
+.album img {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(to bottom, #333, #1a1a1a);
+  color: white;
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+}
+
+footer button {
+  padding: 10px 20px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  white-space: nowrap;
+}
+
+footer button:hover {
+  background: #666;
+  transform: scale(1.05);
+}
